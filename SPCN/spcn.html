@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <title>iPhone 16 Pro — Ultimate Love Edition 2.0 ❤️</title>
+  <style>
+    :root {
+      --accent: #ff4b72;
+      --accent-light: #ff7597;
+      --pink-soft: #ffb3c6;
+      --glass: rgba(255,255,255,0.12);
+      --glass-border: rgba(255,255,255,0.22);
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      margin: 0; padding: 0;
+    }
+    html, body {
+      width: 100%; height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      background: #030108;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .stage {
+      width: min(100%, 420px);
+      height: min(900px, 98vh);
+      position: relative;
+    }
+    .phone {
+      position: relative;
+      width: 100%; height: 100%;
+      overflow: hidden;
+      border-radius: 54px;
+      background: #0f0a14;
+      box-shadow:
+        0 0 0 10px #1a1a1c,
+        0 0 0 13px #08080a,
+        0 35px 90px rgba(255, 75, 114, 0.38),
+        0 0 160px rgba(255, 75, 114, 0.18);
+    }
+    .wallpaper {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(165deg, #2b0a1a 0%, #5e1b3a 40%, #c94b6a 100%);
+      transition: opacity 0.6s;
+    }
+    #heart-canvas, #confetti-canvas, #petal-canvas {
+      position: absolute; inset: 0; z-index: 2;
+      pointer-events: none;
+    }
+    .clickable { cursor: pointer; pointer-events: auto; }
+
+    /* Status & Island */
+    .status {
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 52px; padding: 14px 26px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 14px; font-weight: 600; z-index: 90; pointer-events: none;
+    }
+    .island {
+      position: absolute; top: 11px; left: 50%;
+      transform: translateX(-50%);
+      height: 36px; min-width: 156px; padding: 0 18px;
+      background: #000; border-radius: 22px; z-index: 100;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      font-size: 12.5px; color: #ff8da7; font-weight: 500;
+      border: 1px solid rgba(255, 117, 151, 0.45);
+      box-shadow: 0 0 28px rgba(255, 75, 114, 0.55);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      white-space: nowrap;
+    }
+    .island.celebrate {
+      min-width: 210px;
+      color: #ffb3c6;
+      border-color: rgba(255, 180, 200, 0.6);
+      box-shadow: 0 0 40px rgba(255, 75, 114, 0.7);
+    }
+
+    .heart-beat { display: inline-block; animation: beat 1.15s infinite; }
+    .heart-beat-fast { display: inline-block; animation: beat 0.75s infinite; }
+    .heart-beat-slow { display: inline-block; animation: beat 1.45s infinite; }
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.42); }
+    }
+
+    .screen {
+      position: absolute; inset: 0;
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+    }
+
+    /* LOCK */
+    .lock {
+      z-index: 40;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 98px 26px 28px; text-align: center;
+      background: rgba(0,0,0,0.18);
+    }
+    .lock-date { font-size: 16px; font-weight: 500; color: #ffe3ec; letter-spacing: 0.3px; }
+    .lock-time {
+      font-size: 86px; font-weight: 200; line-height: 1;
+      margin-top: 4px; letter-spacing: -2px;
+      text-shadow: 0 8px 28px rgba(0,0,0,0.45);
+    }
+    .love-badge {
+      background: rgba(255,255,255,0.16);
+      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 24px; padding: 15px 20px;
+      margin: 24px auto 0; font-size: 13.5px; max-width: 310px;
+      line-height: 1.55; box-shadow: 0 14px 36px rgba(0,0,0,0.28);
+    }
+    .notification {
+      background: rgba(255,255,255,0.13);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 18px; padding: 13px 16px;
+      margin: 18px auto 0; max-width: 310px;
+      display: flex; gap: 13px; align-items: center;
+      text-align: left; font-size: 13px;
+      animation: notifIn 0.7s cubic-bezier(0.22,1,0.36,1);
+    }
+    @keyframes notifIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .notification .icon {
+      width: 38px; height: 38px; border-radius: 11px;
+      background: linear-gradient(135deg, #ff4b72, #ff7597);
+      display: grid; place-items: center; font-size: 19px; flex-shrink: 0;
+    }
+    .lock-shortcuts {
+      display: flex; justify-content: space-between;
+      padding: 0 16px; margin-bottom: 16px;
+    }
+    .round-glass {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(255,255,255,0.16);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.28);
+      display: grid; place-items: center; font-size: 23px;
+      transition: transform 0.15s, background 0.2s;
+    }
+    .round-glass:active { transform: scale(0.88); background: rgba(255,75,114,0.35); }
+
+    /* PIN */
+    .pin-screen {
+      z-index: 60;
+      background: rgba(8, 4, 14, 0.96);
+      backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: space-between; padding: 86px 24px 34px;
+      transform: translateY(100%); opacity: 0; pointer-events: none;
+    }
+    .pin-screen.show { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .pin-dots { display: flex; gap: 18px; margin: 22px 0 8px; }
+    .pin-dot {
+      width: 15px; height: 15px; border: 2px solid #ff8da7;
+      border-radius: 50%; transition: all 0.22s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .pin-dot.filled {
+      background: #ff4b72; border-color: #ff4b72;
+      box-shadow: 0 0 18px #ff4b72;
+      transform: scale(1.15);
+    }
+    .keypad {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 18px 24px; width: 100%; max-width: 290px;
+    }
+    .key {
+      width: 76px; height: 76px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.1);
+      font-size: 29px; color: #fff; font-weight: 400;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto; transition: all 0.12s;
+    }
+    .key:active { background: rgba(255,75,114,0.6); transform: scale(0.9); }
+
+    /* HOME */
+    .home {
+      z-index: 20;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 78px 16px 22px;
+      opacity: 0; pointer-events: none; transform: scale(0.96);
+    }
+    .home.visible { opacity: 1; pointer-events: auto; transform: scale(1); }
+
+    .widget {
+      background: rgba(255,255,255,0.13);
+      backdrop-filter: blur(22px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 24px; padding: 16px 18px;
+      margin-bottom: 16px; display: flex; align-items: center; gap: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .widget-heart {
+      width: 52px; height: 52px; border-radius: 18px;
+      background: linear-gradient(135deg, #ff4b72, #ff7597);
+      display: grid; place-items: center; font-size: 26px;
+      box-shadow: 0 8px 20px rgba(255,75,114,0.45);
+    }
+    .widget-text h4 { margin: 0 0 4px; font-size: 15.5px; color: #ffe3ec; }
+    .widget-text p { margin: 0; font-size: 12.5px; color: #ffb3c6; opacity: 0.95; }
+
+    .love-meter {
+      margin-top: 8px;
+      height: 6px; background: rgba(255,255,255,0.15);
+      border-radius: 10px; overflow: hidden;
+    }
+    .love-meter-fill {
+      height: 100%; width: 87%;
+      background: linear-gradient(90deg, #ff4b72, #ff9aab);
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,75,114,0.6);
+      transition: width 1.2s ease;
+    }
+
+    .app-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 18px 8px;
+    }
+    .app-icon {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      background: none; border: none; color: #fff;
+    }
+    .app-tile {
+      width: 64px; height: 64px; border-radius: 18px;
+      display: grid; place-items: center; font-size: 28px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+      transition: transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .app-icon:active .app-tile { transform: scale(0.86); }
+    .app-label { font-size: 10.5px; opacity: 0.92; font-weight: 500; }
+
+    .dock {
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 32px; padding: 13px 14px;
+      display: flex; justify-content: space-around; margin-top: auto;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    }
+
+    /* APP WINDOW */
+    .app-window {
+      z-index: 50; background: #0e0812;
+      transform: translateY(100%); opacity: 0; pointer-events: none;
+      display: flex; flex-direction: column; padding-top: 52px;
+    }
+    .app-window.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .app-header {
+      height: 50px; padding: 0 18px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #0e0812;
+    }
+    .app-body {
+      flex: 1; padding: 18px; overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .letter-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px; padding: 22px;
+      line-height: 1.75; font-size: 14.5px; color: #ffe6ed;
+    }
+    .btn-love {
+      width: 100%; padding: 15px; border-radius: 18px; border: none;
+      background: linear-gradient(135deg, #ff4b72, #ff7597);
+      color: #fff; font-weight: 600; font-size: 15.5px;
+      box-shadow: 0 8px 26px rgba(255,75,114,0.45);
+      margin-top: 14px; transition: transform 0.15s, box-shadow 0.2s;
+    }
+    .btn-love:active { transform: scale(0.96); }
+
+    .runaway-btn {
+      position: absolute;
+      transition: all 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+      z-index: 10;
+    }
+    .home-bar {
+      width: 134px; height: 5px; background: #fff;
+      border-radius: 10px; margin: 8px auto 0; opacity: 0.7;
+    }
+    .shake { animation: shake 0.45s ease-in-out; }
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%,60% { transform: translateX(-14px); }
+      40%,80% { transform: translateX(14px); }
+    }
+
+    .memory-card {
+      background: rgba(255,255,255,0.06);
+      border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      margin-bottom: 16px;
+      transition: transform 0.25s;
+    }
+    .memory-card:active { transform: scale(0.98); }
+    .memory-card img {
+      width: 100%; height: 180px; object-fit: cover; display: block;
+    }
+    .memory-caption {
+      padding: 13px 15px; font-size: 13.5px; color: #ffe3ec; text-align: center;
+    }
+
+    .promise-item, .chat-bubble, .song-item, .timeline-item, .quiz-option, .diary-item {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px; padding: 16px;
+      margin-bottom: 12px;
+    }
+    .chat-bubble.me {
+      background: linear-gradient(135deg, rgba(255,75,114,0.28), rgba(255,117,151,0.22));
+      border-color: rgba(255,117,151,0.35);
+      margin-left: 28px;
+    }
+    .chat-bubble.you { margin-right: 28px; }
+    .song-item { display: flex; align-items: center; gap: 14px; }
+    .song-cover {
+      width: 50px; height: 50px; border-radius: 13px;
+      background: linear-gradient(135deg, #ff4b72, #a18cd1);
+      display: grid; place-items: center; font-size: 21px; flex-shrink: 0;
+    }
+    .now-playing {
+      background: rgba(255,75,114,0.16);
+      border: 1px solid rgba(255,117,151,0.4);
+      border-radius: 20px; padding: 16px;
+      margin-bottom: 18px; display: flex; align-items: center; gap: 14px;
+    }
+
+    .quiz-option {
+      text-align: left; cursor: pointer; transition: all 0.2s;
+    }
+    .quiz-option:active { background: rgba(255,75,114,0.25); transform: scale(0.98); }
+
+    .secret-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff4b72, #ff7597);
+      color: white; font-size: 11px; padding: 3px 10px;
+      border-radius: 20px; margin-left: 8px; font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="phone" id="phone">
+      <div class="wallpaper" id="wallpaper"></div>
+      <canvas id="heart-canvas"></canvas>
+      <canvas id="petal-canvas"></canvas>
+      <canvas id="confetti-canvas"></canvas>
+
+      <!-- Status -->
+      <div class="status">
+        <span id="status-time">22:11</span>
+        <div style="display:flex; gap:8px; align-items:center; font-size:13px;">
+          <span>📶</span><span>🔋</span>
+        </div>
+      </div>
+
+      <!-- Island -->
+      <div class="island clickable" id="island" onclick="pulseIsland()">
+        <span class="heart-beat">💖</span>
+        <span id="island-text">Thinking of You</span>
+      </div>
+
+      <!-- LOCK SCREEN -->
+      <div class="screen lock clickable" id="lock-screen" onclick="showPin()">
+        <div>
+          <div class="lock-date" id="lock-date">Thứ Ba, 10 Tháng 11</div>
+          <div class="lock-time" id="lock-time">22:11</div>
+          <div class="love-badge">
+            <span class="heart-beat">💖</span> Anh đã chuẩn bị một bí mật rất đặc biệt chỉ dành riêng cho em...
+          </div>
+          <div class="notification">
+            <div class="icon"><span class="heart-beat-fast">💌</span></div>
+            <div>
+              <div style="font-weight:600; font-size:13.5px;">Tin nhắn mới từ Anh</div>
+              <div style="font-size:12.5px; opacity:0.88; margin-top:3px;">Em mở điện thoại đi, anh có chuyện muốn nói...</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="lock-shortcuts">
+            <button class="round-glass clickable" onclick="event.stopPropagation(); toggleFlash();">🔦</button>
+            <button class="round-glass clickable" onclick="event.stopPropagation(); showPin();">📷</button>
+          </div>
+          <div style="font-size:12.5px; margin-bottom:14px; font-weight:600; letter-spacing:0.6px; color:#ffb3c6;">
+            CHẠM MÀN HÌNH ĐỂ MỞ BÍ MẬT <span class="heart-beat">❤️</span>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+
+      <!-- PIN -->
+      <div class="screen pin-screen" id="pin-screen">
+        <div style="text-align:center;" id="pin-header">
+          <div style="font-size:36px; margin-bottom:10px;" class="heart-beat">🔐</div>
+          <div style="font-weight:600; font-size:18.5px; color:#ffccd5;">Nhập Mật Mã Mở Lối Trái Tim</div>
+          <div style="font-size:12.5px; color:#ffa8ba; margin-top:7px;">Gợi ý: <b>123456</b></div>
+          <div class="pin-dots" id="pin-dots">
+            <div class="pin-dot"></div><div class="pin-dot"></div><div class="pin-dot"></div>
+            <div class="pin-dot"></div><div class="pin-dot"></div><div class="pin-dot"></div>
+          </div>
+        </div>
+        <div class="keypad">
+          <button class="key clickable" onclick="pressPin('1')">1</button>
+          <button class="key clickable" onclick="pressPin('2')">2</button>
+          <button class="key clickable" onclick="pressPin('3')">3</button>
+          <button class="key clickable" onclick="pressPin('4')">4</button>
+          <button class="key clickable" onclick="pressPin('5')">5</button>
+          <button class="key clickable" onclick="pressPin('6')">6</button>
+          <button class="key clickable" onclick="pressPin('7')">7</button>
+          <button class="key clickable" onclick="pressPin('8')">8</button>
+          <button class="key clickable" onclick="pressPin('9')">9</button>
+          <div></div>
+          <button class="key clickable" onclick="pressPin('0')">0</button>
+          <button class="key clickable" style="font-size:13.5px; border:none; background:none; color:#ffa8ba;" onclick="backspacePin()">XÓA</button>
+        </div>
+        <button class="clickable" style="background:none; border:none; color:#ff7597; font-size:14.5px; padding:10px 18px;" onclick="hidePin()">Hủy</button>
+      </div>
+
+      <!-- HOME -->
+      <div class="screen home" id="home-screen">
+        <div class="widget">
+          <div class="widget-heart">
+            <span class="heart-beat">💗</span>
+          </div>
+          <div class="widget-text" style="flex:1;">
+            <h4>Trái Tim Anh</h4>
+            <p>Đang đập vì em mỗi giây <span class="heart-beat-fast">❤️</span></p>
+            <div class="love-meter">
+              <div class="love-meter-fill" id="love-meter"></div>
+            </div>
+            <div style="font-size:11px; color:#ffb3c6; margin-top:5px; opacity:0.9;">Mức độ yêu: 87%</div>
+          </div>
+        </div>
+
+        <div class="app-grid">
+          <button class="app-icon clickable" onclick="openApp('Thư Tình')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#ff4b72,#ff7597);">💌</div>
+            <span class="app-label">Thư Tình</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Tỏ Tình')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#ff0844,#ffb199);">💘</div>
+            <span class="app-label">Câu Hỏi</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Lý Do')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#f77062,#fe5196);">💖</div>
+            <span class="app-label">Lý Do</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Kỷ Niệm')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb);">📸</div>
+            <span class="app-label">Kỷ Niệm</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Playlist')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#7f53ac,#647dee);">🎵</div>
+            <span class="app-label">Playlist</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Lời Hứa')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#f093fb,#f5576c);">📝</div>
+            <span class="app-label">Lời Hứa</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Ngày Đặc Biệt')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">📅</div>
+            <span class="app-label">Ngày Đặc Biệt</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Tin Nhắn')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#43e97b,#38f9d7);">💬</div>
+            <span class="app-label">Tin Nhắn</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Câu Đố')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#fa709a,#fee140);">🧩</div>
+            <span class="app-label">Câu Đố</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Kế Hoạch')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#30cfd0,#330867);">🚀</div>
+            <span class="app-label">Kế Hoạch</span>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Nhật Ký')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#a8edea,#fed6e3);">📔</div>
+            <span class="app-label">Nhật Ký</span>
+          </button>
+          <button class="app-icon clickable" id="secret-app" style="display:none;" onclick="openApp('Bí Mật')">
+            <div class="app-tile" style="background:linear-gradient(135deg,#ff0844,#ffb199);">🔒</div>
+            <span class="app-label">Bí Mật</span>
+          </button>
+        </div>
+
+        <div class="dock">
+          <button class="app-icon clickable" onclick="openApp('Thư Tình')">
+            <div class="app-tile" style="background:#ff4b72;">💌</div>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Tỏ Tình')">
+            <div class="app-tile" style="background:#ff0844;">💘</div>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Lời Hứa')">
+            <div class="app-tile" style="background:#f5576c;">📝</div>
+          </button>
+          <button class="app-icon clickable" onclick="openApp('Tin Nhắn')">
+            <div class="app-tile" style="background:#38f9d7;">💬</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- APP WINDOW -->
+      <div class="screen app-window" id="app-window">
+        <div class="app-header">
+          <h3 id="app-title" style="margin:0; font-size:17px; color:#ffb3c6; font-weight:600;">Ứng dụng</h3>
+          <button class="clickable" onclick="closeApp()" style="background:rgba(255,255,255,0.14); border:none; color:#fff; border-radius:50%; width:32px; height:32px; font-size:17px;">✕</button>
+        </div>
+        <div class="app-body" id="app-body"></div>
+        <div class="clickable" onclick="closeApp()" style="padding:14px 0; background:#0e0812;">
+          <div class="home-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let enteredPin = "";
+    const correctPin = "123456";
+    let isUnlocked = false;
+    let heartsRunning = false;
+    let typewriterTimer = null;
+    let noAttempts = 0;
+    let lovePercent = 87;
+
+    const loveReasons = [
+      "Nụ cười của em là ánh sáng ấm áp nhất anh được nhìn thấy mỗi ngày ✨",
+      "Chỉ cần nhìn vào mắt em, mọi mệt mỏi của anh đều tan biến 💖",
+      "Anh thích cách em cười tít mắt mỗi khi vui, đáng yêu đến mức muốn giữ mãi 🥰",
+      "Giọng nói của em có phép màu khiến một ngày dài trở nên nhẹ nhàng hơn 🎵",
+      "Vì em chính là em — người khiến trái tim anh tự động đập nhanh hơn mỗi lần gặp ❤️",
+      "Anh thích sự dịu dàng và cách em quan tâm người khác một cách rất thật 🌸",
+      "Có những người chỉ cần xuất hiện là đủ khiến thế giới trở nên đẹp hơn. Em là người đó.",
+      "Anh không biết từ khi nào, nhưng mọi khoảnh khắc có em đều trở thành kỷ niệm anh muốn giữ mãi.",
+      "Em khiến anh muốn trở thành phiên bản tốt hơn của chính mình mỗi ngày.",
+      "Chỉ cần nghĩ đến em là anh đã thấy ngày mai đáng mong chờ hơn.",
+      "Anh thích cả những lúc em hơi bướng bỉnh, vì đó cũng là một phần đáng yêu của em.",
+      "Có em, những ngày bình thường cũng trở nên đặc biệt."
+    ];
+
+    const runawayTexts = [
+      "Suy nghĩ lại 🙈", "Bấm nút trên đi mà 🥺", "Nút này hỏng rồi 😜",
+      "Đừng bấm nữa nha 💖", "Đồng ý đi em ơi 🥰", "Anh đợi em đó ❤️",
+      "Thử nút hồng xem nào ✨", "Em đang trêu anh đúng không? 😌",
+      "Nút này chạy nhanh lắm đó 💨", "Không bắt được đâu 😂",
+      "Anh biết em sẽ bấm Đồng ý mà 💕", "Cứ thử xem... 🫣"
+    ];
+
+    function updateTime() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2,'0');
+      const m = String(now.getMinutes()).padStart(2,'0');
+      document.getElementById('status-time').innerText = `${h}:${m}`;
+      document.getElementById('lock-time').innerText = `${h}:${m}`;
+      const days = ['Chủ Nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
+      document.getElementById('lock-date').innerText = `${days[now.getDay()]}, ${now.getDate()} Tháng ${now.getMonth()+1}`;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    function showPin() {
+      if (isUnlocked) return;
+      document.getElementById('pin-screen').classList.add('show');
+    }
+    function hidePin() {
+      document.getElementById('pin-screen').classList.remove('show');
+      enteredPin = ""; updateDots();
+    }
+    function pressPin(num) {
+      if (enteredPin.length < 6) {
+        enteredPin += num; updateDots();
+        if (enteredPin.length === 6) setTimeout(verifyPin, 200);
+      }
+    }
+    function backspacePin() {
+      enteredPin = enteredPin.slice(0,-1); updateDots();
+    }
+    function updateDots() {
+      document.querySelectorAll('.pin-dot').forEach((dot,i) => {
+        dot.classList.toggle('filled', i < enteredPin.length);
+      });
+    }
+    function verifyPin() {
+      if (enteredPin === correctPin) {
+        isUnlocked = true;
+        hidePin();
+        document.getElementById('lock-screen').style.display = 'none';
+        document.getElementById('home-screen').classList.add('visible');
+        startFloatingHearts();
+        startPetals();
+        document.getElementById('island-text').innerText = "For You ❤️";
+        increaseLove(5);
+      } else {
+        const header = document.getElementById('pin-header');
+        header.classList.add('shake');
+        setTimeout(() => { header.classList.remove('shake'); enteredPin=""; updateDots(); }, 450);
+      }
+    }
+
+    function increaseLove(n) {
+      lovePercent = Math.min(100, lovePercent + n);
+      const fill = document.getElementById('love-meter');
+      if (fill) fill.style.width = lovePercent + '%';
+    }
+
+    function openApp(name) {
+      if (!isUnlocked) return;
+      document.getElementById('app-title').innerText = name;
+      const body = document.getElementById('app-body');
+      clearTimeout(typewriterTimer);
+      increaseLove(2);
+
+      if (name === 'Thư Tình') {
+        body.innerHTML = `
+          <div class="letter-box">
+            <h3 style="margin:0 0 16px; color:#ff7597; text-align:center; font-size:17.5px;">
+              <span class="heart-beat">💌</span> Gửi Em
+            </h3>
+            <div id="letter-content" style="min-height:240px;"></div>
+            <button class="btn-love clickable" onclick="openApp('Tỏ Tình')" style="display:none;" id="letter-btn">
+              Mở câu hỏi đặc biệt <span class="heart-beat">💘</span>
+            </button>
+            <button class="btn-love clickable" onclick="typeWriter()" style="margin-top:10px; background:rgba(255,255,255,0.1); box-shadow:none;" id="reread-btn">
+              Đọc lại thư 💌
+            </button>
+          </div>`;
+        typeWriter();
+      }
+      else if (name === 'Tỏ Tình') {
+        noAttempts = 0;
+        body.innerHTML = `
+          <div style="text-align:center; padding-top:10px; position:relative; min-height:420px;">
+            <div style="font-size:82px;" class="heart-beat">💖</div>
+            <h2 style="color:#ffccd5; margin:20px 0 14px; font-size:23px; line-height:1.35;">
+              Em có đồng ý<br>làm người yêu anh không?
+            </h2>
+            <p style="font-size:14px; color:#ffa8ba; line-height:1.6; max-width:300px; margin:0 auto;">
+              Anh không hứa sẽ hoàn hảo. Anh chỉ hứa sẽ luôn cố gắng hết sức để em cảm thấy được yêu thương và an toàn.
+            </p>
+            <div style="margin-top:42px; display:flex; flex-direction:column; gap:20px; align-items:center; position:relative; height:140px;">
+              <button class="btn-love clickable" style="max-width:260px; z-index:5;" onclick="sayYes()">
+                Đồng ý nhé <span class="heart-beat">❤️</span>
+              </button>
+              <button id="no-btn" class="clickable runaway-btn"
+                style="padding:13px 26px; border-radius:18px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.22); color:#ddd; font-size:14px;"
+                onmouseover="runAway()" onclick="runAway()">Suy nghĩ lại 🙈</button>
+            </div>
+          </div>`;
+      }
+      else if (name === 'Lý Do') {
+        body.innerHTML = `
+          <div style="text-align:center; padding-top:12px;">
+            <div style="font-size:70px;" class="heart-beat">💝</div>
+            <h3 style="color:#ffccd5; margin:14px 0 6px; font-size:19.5px;">Vì Sao Anh Thích Em?</h3>
+            <p style="font-size:13px; color:#ffa8ba; margin-bottom:22px;">Mỗi lần nhấn là một lý do thật lòng...</p>
+            <div id="reason-display" class="letter-box" style="min-height:120px; display:grid; place-items:center; font-weight:500; color:#fff; font-size:15.5px; line-height:1.6; transition:opacity 0.3s;">
+              "Bấm nút để xem lý do anh chọn em <span class='heart-beat'>❤️</span>"
+            </div>
+            <button class="btn-love clickable" style="max-width:240px; margin-top:22px;" onclick="showRandomReason()">
+              <span class="heart-beat">💖</span> Khám phá tiếp
+            </button>
+          </div>`;
+      }
+      else if (name === 'Kỷ Niệm') {
+        body.innerHTML = `
+          <div style="text-align:center; font-size:14px; color:#ffa8ba; margin-bottom:16px;">
+            Những khoảnh khắc anh muốn giữ mãi <span class="heart-beat">✨</span>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=700&auto=format&fit=crop" alt="">
+            <div class="memory-caption">Khoảnh khắc bình yên bên em <span class="heart-beat">❤️</span></div>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=700&auto=format&fit=crop" alt="">
+            <div class="memory-caption">Những buổi chiều thật đẹp 🌸</div>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=700&auto=format&fit=crop" alt="">
+            <div class="memory-caption">Chỉ cần có em là đủ <span class="heart-beat">✨</span></div>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=700&auto=format&fit=crop" alt="">
+            <div class="memory-caption">Anh muốn có thật nhiều kỷ niệm như thế này cùng em</div>
+          </div>
+          <div class="memory-card">
+            <img src="https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=700&auto=format&fit=crop" alt="">
+            <div class="memory-caption">Những lần cười với nhau đến mệt 🥰</div>
+          </div>`;
+      }
+      else if (name === 'Playlist') {
+        body.innerHTML = `
+          <div class="now-playing">
+            <div class="song-cover"><span class="heart-beat">🎶</span></div>
+            <div style="flex:1;">
+              <div style="font-weight:600; font-size:14.5px;">Perfect — Ed Sheeran</div>
+              <div style="font-size:12.5px; color:#ffb3c6; margin-top:3px;">Đang phát • Dành riêng cho em</div>
+            </div>
+            <div style="font-size:24px;" class="heart-beat">💗</div>
+          </div>
+          <div class="song-item"><div class="song-cover">🌙</div><div><div style="font-weight:500;">All of Me</div><div style="font-size:12.5px; opacity:0.7;">John Legend</div></div></div>
+          <div class="song-item"><div class="song-cover">🌹</div><div><div style="font-weight:500;">Thinking Out Loud</div><div style="font-size:12.5px; opacity:0.7;">Ed Sheeran</div></div></div>
+          <div class="song-item"><div class="song-cover">✨</div><div><div style="font-weight:500;">Just The Way You Are</div><div style="font-size:12.5px; opacity:0.7;">Bruno Mars</div></div></div>
+          <div class="song-item"><div class="song-cover">💞</div><div><div style="font-weight:500;">I Don't Wanna Live Forever</div><div style="font-size:12.5px; opacity:0.7;">ZAYN, Taylor Swift</div></div></div>
+          <div class="song-item"><div class="song-cover">🌸</div><div><div style="font-weight:500;">Photograph</div><div style="font-size:12.5px; opacity:0.7;">Ed Sheeran</div></div></div>
+          <div class="song-item"><div class="song-cover">🦋</div><div><div style="font-weight:500;">Lover</div><div style="font-size:12.5px; opacity:0.7;">Taylor Swift</div></div></div>
+          <p style="text-align:center; font-size:13px; color:#ffb3c6; margin-top:20px;">
+            Playlist này anh lập từ lâu rồi... chỉ chờ ngày được gửi cho em <span class="heart-beat">❤️</span>
+          </p>`;
+      }
+      else if (name === 'Lời Hứa') {
+        body.innerHTML = `
+          <div style="text-align:center; margin-bottom:18px;">
+            <div style="font-size:44px;" class="heart-beat">🤝</div>
+            <h3 style="color:#ffccd5; margin:8px 0 4px;">Những Lời Hứa Của Anh</h3>
+            <p style="font-size:13px; color:#ffa8ba;">Không phải lời nói suông</p>
+          </div>
+          <div class="promise-item">Anh hứa sẽ luôn lắng nghe em, dù là chuyện lớn hay chuyện nhỏ.</div>
+          <div class="promise-item">Anh hứa sẽ cố gắng trở thành chỗ dựa vững vàng mỗi khi em cần.</div>
+          <div class="promise-item">Anh hứa sẽ không bao giờ để em phải đoán xem anh đang nghĩ gì về em.</div>
+          <div class="promise-item">Anh hứa sẽ nhớ những ngày đặc biệt của em và làm chúng thật ý nghĩa.</div>
+          <div class="promise-item">Anh hứa sẽ yêu em bằng cả sự chân thành, không nửa vời.</div>
+          <div class="promise-item" style="border-color:rgba(255,117,151,0.45); background:rgba(255,75,114,0.14);">
+            Và quan trọng nhất: Anh hứa sẽ luôn chọn em, mỗi ngày. <span class="heart-beat">❤️</span>
+          </div>
+          <button class="btn-love clickable" onclick="this.innerHTML='Đã nhận lời hứa 💕'; this.style.background='linear-gradient(135deg,#43e97b,#38f9d7)'; increaseLove(8);">
+            Nhận tất cả lời hứa ❤️
+          </button>`;
+      }
+      else if (name === 'Ngày Đặc Biệt') {
+        body.innerHTML = `
+          <div style="text-align:center; margin-bottom:20px;">
+            <div style="font-size:44px;" class="heart-beat">📅</div>
+            <h3 style="color:#ffccd5; margin:8px 0 4px;">Những Ngày Quan Trọng</h3>
+          </div>
+          <div class="timeline-item">
+            <div style="font-weight:600; color:#ff7597; font-size:15px;">Ngày đầu tiên gặp em</div>
+            <div style="font-size:13.5px; margin-top:5px; opacity:0.9;">Ngày mà mọi thứ bắt đầu thay đổi theo hướng tốt đẹp hơn.</div>
+          </div>
+          <div class="timeline-item">
+            <div style="font-weight:600; color:#ff7597; font-size:15px;">Những lần nói chuyện đến khuya</div>
+            <div style="font-size:13.5px; margin-top:5px; opacity:0.9;">Anh nhớ rất rõ cảm giác không muốn cuộc trò chuyện kết thúc.</div>
+          </div>
+          <div class="timeline-item">
+            <div style="font-weight:600; color:#ff7597; font-size:15px;">Hôm nay</div>
+            <div style="font-size:13.5px; margin-top:5px; opacity:0.9;">Ngày anh quyết định nói ra tất cả những gì đang giữ trong lòng.</div>
+          </div>
+          <div class="timeline-item" style="border-color:rgba(255,117,151,0.45); background:rgba(255,75,114,0.1);">
+            <div style="font-weight:600; color:#ff7597; font-size:15px;">Ngày mai và những ngày sau</div>
+            <div style="font-size:13.5px; margin-top:5px; opacity:0.9;">Anh muốn viết tiếp cùng em... nếu em đồng ý. <span class="heart-beat">❤️</span></div>
+          </div>`;
+      }
+      else if (name === 'Tin Nhắn') {
+        body.innerHTML = `
+          <div style="font-size:13px; color:#ffa8ba; text-align:center; margin-bottom:18px;">
+            Đoạn chat anh từng muốn gửi... <span class="heart-beat">💬</span>
+          </div>
+          <div class="chat-bubble you">
+            <div style="font-size:12px; opacity:0.7; margin-bottom:4px;">Anh</div>
+            Em ơi, hôm nay anh nghĩ về em nhiều lắm.
+          </div>
+          <div class="chat-bubble you">
+            <div style="font-size:12px; opacity:0.7; margin-bottom:4px;">Anh</div>
+            Không phải nghĩ linh tinh đâu. Anh nghĩ về nụ cười của em, về cách em nói chuyện, về việc được ở bên em sẽ vui như thế nào.
+          </div>
+          <div class="chat-bubble me">
+            <div style="font-size:12px; opacity:0.7; margin-bottom:4px;">Em</div>
+            ...
+          </div>
+          <div class="chat-bubble you">
+            <div style="font-size:12px; opacity:0.7; margin-bottom:4px;">Anh</div>
+            Anh biết đây có thể hơi bất ngờ. Nhưng anh không muốn giấu nữa.
+          </div>
+          <div class="chat-bubble you" style="border-color:rgba(255,117,151,0.5);">
+            <div style="font-size:12px; opacity:0.7; margin-bottom:4px;">Anh</div>
+            Anh thích em. Thật lòng. <span class="heart-beat">❤️</span>
+          </div>
+          <p style="text-align:center; font-size:13px; color:#ffb3c6; margin-top:22px;">
+            Và bây giờ... anh đã nói ra bằng cả một chiếc điện thoại này rồi <span class="heart-beat">❤️</span>
+          </p>`;
+      }
+      else if (name === 'Câu Đố') {
+        body.innerHTML = `
+          <div style="text-align:center; margin-bottom:20px;">
+            <div style="font-size:48px;" class="heart-beat">🧩</div>
+            <h3 style="color:#ffccd5; margin:10px 0 6px;">Câu Đố Tình Yêu</h3>
+            <p style="font-size:13px; color:#ffa8ba;">Trả lời đúng hết để mở khóa bất ngờ</p>
+          </div>
+          <div id="quiz-area">
+            <div class="letter-box" style="margin-bottom:16px;">
+              <div style="font-weight:600; margin-bottom:12px;">1. Anh thích nhất điều gì ở em?</div>
+              <div class="quiz-option" onclick="quizAnswer(this,true)">A. Nụ cười và sự dịu dàng</div>
+              <div class="quiz-option" onclick="quizAnswer(this,false)">B. Khả năng nấu ăn</div>
+              <div class="quiz-option" onclick="quizAnswer(this,false)">C. Tốc độ trả lời tin nhắn</div>
+            </div>
+            <div class="letter-box">
+              <div style="font-weight:600; margin-bottom:12px;">2. Nếu được chọn lại, anh vẫn sẽ chọn em chứ?</div>
+              <div class="quiz-option" onclick="quizAnswer(this,true)">A. Luôn luôn chọn em</div>
+              <div class="quiz-option" onclick="quizAnswer(this,false)">B. Cân nhắc lại</div>
+              <div class="quiz-option" onclick="quizAnswer(this,false)">C. Để xem đã</div>
+            </div>
+          </div>
+          <div id="quiz-result" style="display:none; text-align:center; margin-top:20px;">
+            <div style="font-size:52px;" class="heart-beat">🎉</div>
+            <h3 style="color:#ff7597; margin:12px 0;">Em trả lời quá chuẩn!</h3>
+            <p style="color:#ffb3c6;">Anh càng thích em hơn rồi đó 💕</p>
+          </div>`;
+      }
+      else if (name === 'Kế Hoạch') {
+        body.innerHTML = `
+          <div style="text-align:center; margin-bottom:18px;">
+            <div style="font-size:44px;" class="heart-beat">🚀</div>
+            <h3 style="color:#ffccd5; margin:8px 0 4px;">Kế Hoạch Tương Lai</h3>
+            <p style="font-size:13px; color:#ffa8ba;">Những điều anh muốn làm cùng em</p>
+          </div>
+          <div class="timeline-item">🌅 Đi xem bình minh cùng nhau ít nhất một lần</div>
+          <div class="timeline-item">🍜 Thử hết các quán ăn ngon mà em từng muốn</div>
+          <div class="timeline-item">✈️ Đi du lịch xa một chuyến thật dài</div>
+          <div class="timeline-item">📸 Chụp thật nhiều ảnh và in thành album</div>
+          <div class="timeline-item">🏠 Xây dựng một tổ ấm nhỏ thật ấm áp</div>
+          <div class="timeline-item" style="border-color:rgba(255,117,151,0.4); background:rgba(255,75,114,0.12);">
+            Và quan trọng nhất: Được ở bên em thật lâu thật lâu <span class="heart-beat">❤️</span>
+          </div>`;
+      }
+      else if (name === 'Nhật Ký') {
+        body.innerHTML = `
+          <div style="text-align:center; margin-bottom:18px;">
+            <div style="font-size:44px;" class="heart-beat">📔</div>
+            <h3 style="color:#ffccd5; margin:8px 0 4px;">Nhật Ký Tình Yêu</h3>
+          </div>
+          <div class="diary-item">
+            <div style="font-size:12.5px; color:#ff7597; margin-bottom:6px;">Hôm nay</div>
+            Hôm nay anh quyết định nói ra tất cả. Tim đập rất mạnh, nhưng anh biết đây là lúc phải làm.
+          </div>
+          <div class="diary-item">
+            <div style="font-size:12.5px; color:#ff7597; margin-bottom:6px;">Vài tuần trước</div>
+            Anh nhận ra mình luôn mỉm cười khi nghĩ đến em. Đó là lúc anh biết chắc.
+          </div>
+          <div class="diary-item">
+            <div style="font-size:12.5px; color:#ff7597; margin-bottom:6px;">Lần đầu gặp</div>
+            Anh không ngờ một người có thể khiến anh chú ý đến vậy chỉ sau vài lần gặp.
+          </div>
+          <div class="diary-item" style="border-color:rgba(255,117,151,0.4);">
+            <div style="font-size:12.5px; color:#ff7597; margin-bottom:6px;">Tương lai</div>
+            Anh hy vọng sẽ viết tiếp thật nhiều trang nhật ký có em trong đó. <span class="heart-beat">❤️</span>
+          </div>`;
+      }
+      else if (name === 'Bí Mật') {
+        body.innerHTML = `
+          <div style="text-align:center; padding-top:30px;">
+            <div style="font-size:72px;" class="heart-beat">🔒💖</div>
+            <h2 style="color:#ff7597; margin:20px 0 14px;">Bí Mật Đã Mở</h2>
+            <p style="font-size:15.5px; line-height:1.7; color:#ffe6ed; max-width:300px; margin:0 auto;">
+              Cảm ơn em đã đồng ý.<br><br>
+              Từ hôm nay, anh không còn phải giấu nữa.<br>
+              Anh sẽ cố gắng mỗi ngày để xứng đáng với sự tin tưởng của em.
+            </p>
+            <p style="margin-top:28px; font-size:17px; color:#ff7597; font-weight:600;">
+              Anh yêu em nhiều lắm <span class="heart-beat-fast">❤️</span>
+            </p>
+            <div style="margin-top:30px; font-size:13px; color:#ffa8ba;">
+              Đây là app bí mật chỉ mở khi em nói “Đồng ý”
+            </div>
+          </div>`;
+      }
+
+      document.getElementById('app-window').classList.add('open');
+    }
+
+    function closeApp() {
+      document.getElementById('app-window').classList.remove('open');
+      clearTimeout(typewriterTimer);
+    }
+
+    function typeWriter() {
+      const text = `Chào em,
+
+Có lẽ em sẽ bất ngờ khi thấy chiếc điện thoại này. Anh đã dành khá nhiều thời gian và cả một chút can đảm để tạo ra một không gian nhỏ chỉ dành riêng cho em.
+
+Từ những lần gặp đầu tiên, anh nhận ra rằng mỗi khoảnh khắc bên em đều trở nên đặc biệt hơn bình thường. Nụ cười của em, cách em nói chuyện, thậm chí cả những lúc im lặng… tất cả đều khiến anh muốn được ở gần hơn.
+
+Anh không giỏi nói những lời hoa mỹ. Nhưng anh chắc chắn một điều:
+
+Anh thực sự thích em rất nhiều ❤️
+
+Và anh muốn được tiếp tục thích em… mỗi ngày một nhiều hơn.`;
+
+      const el = document.getElementById('letter-content');
+      let i = 0;
+      el.innerHTML = '';
+      function type() {
+        if (i < text.length) {
+          el.innerHTML += text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
+          i++;
+          typewriterTimer = setTimeout(type, 26);
+        } else {
+          const btn = document.getElementById('letter-btn');
+          if (btn) btn.style.display = 'block';
+        }
+      }
+      type();
+    }
+
+    function runAway() {
+      const btn = document.getElementById('no-btn');
+      if (!btn) return;
+      noAttempts++;
+      const maxX = 130 + noAttempts * 8;
+      const maxY = 110 + noAttempts * 6;
+      const x = Math.floor(Math.random()*(maxX*2)) - maxX;
+      const y = Math.floor(Math.random()*(maxY*2)) - maxY;
+      const idx = Math.min(noAttempts, runawayTexts.length - 1);
+      btn.innerText = runawayTexts[idx % runawayTexts.length];
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+      if (noAttempts > 6) {
+        btn.style.opacity = '0.6';
+        btn.innerText = "Thôi được rồi... 🥺";
+      }
+    }
+
+    function sayYes() {
+      const body = document.getElementById('app-body');
+      body.innerHTML = `
+        <div style="text-align:center; padding-top:36px;">
+          <div style="font-size:96px;" class="heart-beat">🎉💖🎉</div>
+          <h2 style="color:#ff7597; margin:24px 0 16px; font-size:27px;">
+            Cảm Ơn Em! <span class="heart-beat">❤️</span>
+          </h2>
+          <p style="font-size:16px; line-height:1.7; color:#ffe6ed; max-width:310px; margin:0 auto;">
+            Đây là một trong những khoảnh khắc hạnh phúc nhất của anh từ trước đến giờ.
+          </p>
+          <p style="font-size:15px; line-height:1.65; color:#ffb3c6; max-width:300px; margin:20px auto 0;">
+            Từ hôm nay, anh không còn phải giấu cảm xúc nữa.<br>
+            Hãy cùng nhau viết tiếp những chương thật đẹp em nhé.
+          </p>
+          <p style="margin-top:30px; font-size:17px; color:#ff7597; font-weight:600;">
+            Anh yêu em nhiều lắm <span class="heart-beat-fast">❤️</span>
+          </p>
+        </div>`;
+      launchConfetti();
+      document.getElementById('island-text').innerText = "She said Yes! 💕";
+      document.getElementById('island').classList.add('celebrate');
+      document.getElementById('secret-app').style.display = 'flex';
+      increaseLove(13);
+      lovePercent = 100;
+      const fill = document.getElementById('love-meter');
+      if (fill) fill.style.width = '100%';
+    }
+
+    function showRandomReason() {
+      const box = document.getElementById('reason-display');
+      box.style.opacity = 0;
+      setTimeout(() => {
+        box.innerHTML = `"${loveReasons[Math.floor(Math.random()*loveReasons.length)]}"`;
+        box.style.opacity = 1;
+        increaseLove(1);
+      }, 220);
+    }
+
+    function quizAnswer(el, correct) {
+      if (correct) {
+        el.style.background = 'rgba(67,233,123,0.25)';
+        el.style.borderColor = 'rgba(67,233,123,0.5)';
+        setTimeout(() => {
+          document.getElementById('quiz-area').style.display = 'none';
+          document.getElementById('quiz-result').style.display = 'block';
+          increaseLove(6);
+        }, 400);
+      } else {
+        el.style.background = 'rgba(255,75,114,0.2)';
+        el.style.borderColor = 'rgba(255,75,114,0.4)';
+        setTimeout(() => {
+          el.style.background = '';
+          el.style.borderColor = '';
+        }, 600);
+      }
+    }
+
+    function toggleFlash() {
+      alert("🔦 Đèn pin đã bật sáng ánh hồng tình yêu!");
+    }
+    function pulseIsland() {
+      const island = document.getElementById('island');
+      island.style.transform = 'translateX(-50%) scale(1.1)';
+      setTimeout(() => island.style.transform = 'translateX(-50%) scale(1)', 250);
+    }
+
+    function startFloatingHearts() {
+      if (heartsRunning) return;
+      heartsRunning = true;
+      const canvas = document.getElementById('heart-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+
+      const hearts = Array.from({length: 22}, () => ({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        size: Math.random()*14 + 8,
+        speedY: Math.random()*0.9 + 0.3,
+        opacity: Math.random()*0.5 + 0.25,
+        swing: Math.random()*Math.PI*2,
+        swingSpeed: Math.random()*0.025 + 0.008
+      }));
+
+      function drawHeart(x, y, size, op) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.scale(size/30, size/30);
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.bezierCurveTo(-15, -18, -30, 5, 0, 25);
+        ctx.bezierCurveTo(30, 5, 15, -18, 0, 0);
+        ctx.fillStyle = `rgba(255,75,114,${op})`;
+        ctx.fill();
+        ctx.restore();
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        hearts.forEach(h => {
+          h.swing += h.swingSpeed;
+          drawHeart(h.x + Math.sin(h.swing)*11, h.y, h.size, h.opacity);
+          h.y -= h.speedY;
+          if (h.y < -30) { h.y = canvas.height + 20; h.x = Math.random()*canvas.width; }
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+    }
+
+    function startPetals() {
+      const canvas = document.getElementById('petal-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+
+      const petals = Array.from({length: 14}, () => ({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height - canvas.height,
+        size: Math.random()*10 + 6,
+        speedY: Math.random()*1.1 + 0.4,
+        speedX: Math.random()*0.8 - 0.4,
+        rot: Math.random()*Math.PI*2,
+        rotSpeed: Math.random()*0.04 - 0.02,
+        opacity: Math.random()*0.4 + 0.2
+      }));
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        petals.forEach(p => {
+          p.y += p.speedY;
+          p.x += p.speedX;
+          p.rot += p.rotSpeed;
+          if (p.y > canvas.height + 20) {
+            p.y = -20;
+            p.x = Math.random()*canvas.width;
+          }
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.size, p.size*0.6, 0, 0, Math.PI*2);
+          ctx.fillStyle = `rgba(255,180,200,${p.opacity})`;
+          ctx.fill();
+          ctx.restore();
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+    }
+
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+      const colors = ['#ff4b72','#ff7597','#ffb3c6','#ffdeeb','#ff8da7','#fff','#fbc2eb','#a18cd1'];
+      const particles = Array.from({length: 110}, () => ({
+        x: canvas.width/2, y: canvas.height/2,
+        vx: (Math.random()-0.5)*18,
+        vy: (Math.random()-0.9)*16,
+        size: Math.random()*9 + 3,
+        color: colors[Math.floor(Math.random()*colors.length)],
+        life: 1, decay: Math.random()*0.013 + 0.006,
+        rot: Math.random()*Math.PI*2,
+        rotSpeed: Math.random()*0.2 - 0.1
+      }));
+
+      function animate() {
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        let alive = false;
+        particles.forEach(p => {
+          if (p.life <= 0) return;
+          alive = true;
+          p.x += p.vx; p.y += p.vy; p.vy += 0.22; p.life -= p.decay; p.rot += p.rotSpeed;
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.globalAlpha = p.life;
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+          ctx.restore();
+        });
+        if (alive) requestAnimationFrame(animate);
+        else ctx.clearRect(0,0,canvas.width,canvas.height);
+      }
+      animate();
+    }
+  </script>
+</body>
+</html>
